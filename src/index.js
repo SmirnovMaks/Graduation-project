@@ -1,5 +1,6 @@
-import oneModule from "./modules/one.js";
-import twoModule from "./modules/two.js";
+import modal from "./modules/modal";
+import smoothScroll from "./modules/smoothScroll";
 
-oneModule();
-twoModule();
+
+smoothScroll();
+modal();
