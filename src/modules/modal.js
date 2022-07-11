@@ -22,7 +22,7 @@ const modal = () => {
     };
 
     body.addEventListener('click', (e) => {
-        if (e.target.closest('.modal-open')) {
+        if (e.target.closest('[data-modal-open]')) {
             e.preventDefault();
             modalOpen();
         }
