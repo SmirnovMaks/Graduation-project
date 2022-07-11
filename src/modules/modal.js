@@ -3,40 +3,28 @@ import {
 } from './helpers';
 
 const modal = () => {
-    const header = document.querySelector('.header');
     const modal = document.querySelector('.modal-callback');
     const modalOverlay = document.querySelector('.modal-overlay');
-    console.log(modal);
+    const body = document.querySelector('body');
 
-    header.addEventListener('click', (e) => {
-        if (e.target.closest('.callback-btn')) {
-            e.preventDefault();
-            modal.style.display = 'block';
-            modalOverlay.style.display = 'block';
-            animate({
-                duration: 500,
-                timing(timeFraction) {
-                    return timeFraction;
-                },
-                draw(progress) {
-                    modal.style.opacity = progress;
-                }
-            });
-        } else if (e.target.closest('ul>li>a')) {
-            e.preventDefault();
-            const id = e.target.getAttribute('href');
-            console.log(id);
-            if (id === '#services') {
-                document.querySelector(id).scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            } else {
-                document.querySelector(id).scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'center'
-                });
+    const modalOpen = () => {
+        modal.style.display = 'block';
+        modalOverlay.style.display = 'block';
+        animate({
+            duration: 500,
+            timing(timeFraction) {
+                return timeFraction;
+            },
+            draw(progress) {
+                modal.style.opacity = progress;
             }
+        });
+    };
+
+    body.addEventListener('click', (e) => {
+        if (e.target.closest('.modal-open')) {
+            e.preventDefault();
+            modalOpen();
         }
     });
 
