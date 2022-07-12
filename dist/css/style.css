@@ -872,6 +872,7 @@ hr.white {
 	position: relative;
 	z-index: 10;
 }
+
 .video-block {
 	height: 100%;
 }
@@ -932,7 +933,7 @@ video#video_background {
 	.top-slider {
 		height: 520px;
 	}
-	.top-slider .table {
+	/* .top-slider .table {
 		opacity: 0;
 		visibility: hidden;
 		-webkit-transform: scale(1.5);
@@ -950,7 +951,7 @@ video#video_background {
 		transform: scale(1);
 		opacity: 1;
 		visibility: visible;
-	}
+	} */
 }
 
 @media only screen and (min-width: 1240px) {
