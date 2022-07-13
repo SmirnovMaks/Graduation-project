@@ -5,7 +5,7 @@ import Swiper, {
 } from 'swiper';
 
 const slider = () => {
-    const swiper = new Swiper('.services-elements', {
+    const servicesSlider = new Swiper('.services-elements', {
         modules: [Navigation, Pagination, Autoplay],
         navigation: {
             nextEl: '.arrow-right',
