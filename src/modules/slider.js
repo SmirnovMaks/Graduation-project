@@ -15,13 +15,19 @@ const slider = () => {
         loop: true
     });
     const topSlider = new Swiper('.top-slider', {
-        modules: [Navigation, Autoplay],
+        modules: [Navigation, Autoplay, Pagination],
         slidesPerView: 1,
         loop: true,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false
-        }
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
+            type: 'bullets',
+            clickable: true
+        },
     });
 };
 
