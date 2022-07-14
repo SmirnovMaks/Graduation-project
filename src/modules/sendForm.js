@@ -10,12 +10,11 @@ const sendForm = () => {
     const successText = 'Отправлено';
 
     const validator = (item, regExp) => {
-        inputName.classList.add('success');
         item.addEventListener('input', (e) => {
             e.target.value = e.target.value.replace(regExp, '');
         });
         item.addEventListener('blur', (e) => {
-            if (e.target.value !== '') {
+            if (e.target.value !== '' && !regExp.test(e.target.value)) {
                 e.target.classList.add('success');
                 e.target.classList.remove('error');
             } else {
